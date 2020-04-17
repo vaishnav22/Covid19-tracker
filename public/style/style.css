@@ -76,6 +76,8 @@ input{
     height: 60%; 
     opacity: 0.4;
 }
+
+
 @media (max-width: 415px){
     .col-md-4{
         margin: 20px;
@@ -89,5 +91,7 @@ input{
         align-items: center;
         margin: 20px auto;
     }
+
+   
     
 }
