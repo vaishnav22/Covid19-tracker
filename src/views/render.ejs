@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/5cf47819e0.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="/style/style.css">
+    <title>COVID-19 Tracker</title>
+</head>
+<body>
+    <div class="heading">
+        <h1 class="name">Covid-19</h1>
+    </div>
+    <div class="container">
+
+        <form action="/send" method="POST">
+            <div class="input-group mb-3">
+                <input name="searchCountry" type="text" autocomplete="off" class="form-control" placeholder="Enter the country" aria-describedby="basic-addon2">
+                <div class="input-group-append">
+                  <button class="btn btn-outline-secondary" type="submit">Button</button>
+                </div>
+            </div>
+        </form>
+
+        <h1><%= name %></h1>
+
+        <div class="row">
+            <div class="col-md-4">
+                <div class="card shadow " style="width: 18rem;">
+                    <div class="card-body">
+                      <h5 class="card-title">Infeted</h5>
+                      <h6 class="card-subtitle mb-2"><%= data.confirmed.value %></h6>
+                      <p class="card-text">Number of active cases of COVID-19</p>
+                    </div>
+                    <span></span>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card shadow" style="width: 18rem;">
+                    <div class="card-body">
+                      <h5 class="card-title">Recovered</h5>
+                      <h6 class="card-subtitle mb-2"><%= data.recovered.value %></h6>
+                      <p class="card-text">Number of recoveries from COVID-19</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card shadow" style="width: 18rem;">
+                    <div class="card-body">
+                      <h5 class="card-title">Deaths</h5>
+                      <h6 class="card-subtitle mb-2 "><%= data.deaths.value %></h6>
+                      <p class="card-text">Number of deaths caused by COVID-19</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    
+    <img class="big-circle" src="/image/mid.svg" alt="">
+    <img class="mid-circle" src="./image/small.svg" alt="">
+
+
+</body>
+</html>
