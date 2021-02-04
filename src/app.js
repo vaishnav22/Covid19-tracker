@@ -38,6 +38,7 @@ app.post('/send', (req, res) => {
     .then(function(response){
         var infected = response.data
         console.log(response.data)
+        res.json(response.data)
         res.render('render',{data: infected,name: search})
     }).catch(function (err){
         res.send("cannot find such country! check for spellings!!")
